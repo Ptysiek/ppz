@@ -19,6 +19,7 @@ namespace ppz_fkmm
 
         public MainWindow()
         {
+            _backend = new Program();
             InitializeComponent();
         }
         // _____________________________________________________________________________________________________

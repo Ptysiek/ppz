@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BackSource\ApiHttpHelper.cs" />
+    <Compile Include="BackSource\BreweriesModel.cs" />
     <Compile Include="FrontSource\MainClass.cs" />
     <Compile Include="BackSource\Program.cs" />
     <Compile Include="FrontSource\MainWindow.cs">
