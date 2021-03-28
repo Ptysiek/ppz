@@ -19,7 +19,7 @@ namespace ppz_fkmm.BackSource
 
         private async Task LoadData()
         {
-            string url = "https://api.openbrewerydb.org/breweries/search?query=dog";
+            string url = "https://api.openbrewerydb.org/breweries";
 
             using (HttpResponseMessage response = await httpHelper.ApiClient.GetAsync(url))
             {
