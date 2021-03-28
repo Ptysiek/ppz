@@ -8,5 +8,11 @@ namespace ppz_fkmm.BackSource
 {
     class Program
     {
+        private readonly ApiHttpHelper httpStream;
+
+        Program()
+        {
+            httpStream.InitializeClient();
+        }
     }
 }
