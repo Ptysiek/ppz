@@ -51,9 +51,36 @@
     <Compile Include="FrontSource\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrontSource\uc1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrontSource\uc1.Designer.cs">
+      <DependentUpon>uc1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontSource\uc2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrontSource\uc2.Designer.cs">
+      <DependentUpon>uc2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontSource\uc3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrontSource\uc3.Designer.cs">
+      <DependentUpon>uc3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrontSource\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontSource\uc1.resx">
+      <DependentUpon>uc1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontSource\uc2.resx">
+      <DependentUpon>uc2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontSource\uc3.resx">
+      <DependentUpon>uc3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
