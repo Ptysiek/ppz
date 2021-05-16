@@ -1,7 +1,7 @@
 ﻿
 namespace ppz_fkmm.FrontSource
 {
-    partial class uc2
+    partial class Page2
     {
         /// <summary> 
         /// Required designer variable.

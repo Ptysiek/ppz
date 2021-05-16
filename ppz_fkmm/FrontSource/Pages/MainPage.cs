@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ppz_fkmm.FrontSource
+namespace ppz_fkmm.FrontSource.Pages
 {
-    public partial class uc1 : UserControl
+    public partial class MainPage : UserControl
     {
-        public uc1()
+        public MainPage()
         {
             InitializeComponent();
         }

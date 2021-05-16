@@ -8,13 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ppz_fkmm.BackSource;
-
+using ppz_fkmm.FrontSource.Structures;
 
 namespace ppz_fkmm
 {
-    public partial class MainWindow : Form
+    [System.ComponentModel.DesignerCategory("")]
+    public partial class MainWindow
     {
-        Program _backend;
+        //Program _backend;
+        public Form _form;
+        public Layout _layout;
+
+        public MainWindow()
+        {
+            _form = new Form()
+            {
+                Width = 900,
+                Height = 600
+            };
+        }
+
+
+        /*
         List<UserControl> listPanel = new List<UserControl>();
         int index = 0;
         
@@ -43,7 +58,7 @@ namespace ppz_fkmm
             // BtnBack
             // 
             this.BtnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BtnBack.Location = new System.Drawing.Point(12, 218);
+            this.BtnBack.Location = new System.Drawing.Point(12, 518);
             this.BtnBack.Name = "BtnBack";
             this.BtnBack.Size = new System.Drawing.Size(75, 23);
             this.BtnBack.TabIndex = 1;
@@ -54,7 +69,7 @@ namespace ppz_fkmm
             // BtnNext
             // 
             this.BtnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnNext.Location = new System.Drawing.Point(195, 218);
+            this.BtnNext.Location = new System.Drawing.Point(795, 518);
             this.BtnNext.Name = "BtnNext";
             this.BtnNext.Size = new System.Drawing.Size(75, 23);
             this.BtnNext.TabIndex = 2;
@@ -66,6 +81,7 @@ namespace ppz_fkmm
             // 
             this.uc21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.uc21.Location = new System.Drawing.Point(12, 12);
+            this.uc21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uc21.Name = "uc21";
             this.uc21.Size = new System.Drawing.Size(258, 169);
             this.uc21.TabIndex = 3;
@@ -75,6 +91,7 @@ namespace ppz_fkmm
             // 
             this.uc11.BackColor = System.Drawing.Color.Red;
             this.uc11.Location = new System.Drawing.Point(12, 12);
+            this.uc11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uc11.Name = "uc11";
             this.uc11.Size = new System.Drawing.Size(258, 169);
             this.uc11.TabIndex = 0;
@@ -84,21 +101,15 @@ namespace ppz_fkmm
             // 
             this.uc31.BackColor = System.Drawing.Color.Blue;
             this.uc31.Location = new System.Drawing.Point(12, 12);
+            this.uc31.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uc31.Name = "uc31";
             this.uc31.Size = new System.Drawing.Size(258, 169);
             this.uc31.TabIndex = 4;
             this.uc31.Visible = false;
-            //
-            //
-            //
-            listPanel.Add(uc11);
-            listPanel.Add(uc21);
-            listPanel.Add(uc31);
-            listPanel[index].Visible = true;
             // 
             // MainWindow
             // 
-            this.ClientSize = new System.Drawing.Size(282, 253);
+            this.ClientSize = new System.Drawing.Size(882, 553);
             this.Controls.Add(this.uc31);
             this.Controls.Add(this.uc21);
             this.Controls.Add(this.BtnBack);
@@ -139,5 +150,6 @@ namespace ppz_fkmm
 
             }
         }
+        */
     }
 }

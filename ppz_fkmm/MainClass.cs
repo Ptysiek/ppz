@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ppz_fkmm.BackSource;
 
 namespace ppz_fkmm
 {
@@ -13,7 +14,7 @@ namespace ppz_fkmm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainWindow());
+            new Program();
         }
     }
 }

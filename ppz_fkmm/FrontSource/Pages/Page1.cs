@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ppz_fkmm.FrontSource
 {
-    public partial class uc3 : UserControl
+    public partial class Page1 : UserControl
     {
-        public uc3()
+        public Page1()
         {
             InitializeComponent();
         }
