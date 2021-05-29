@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Runtime.InteropServices.WindowsRuntime;
-using ppz_fkmm.FrontSource.Pages;
+﻿using System.Windows.Forms;
 using ppz_fkmm.BackSource.Controls;
 
 namespace ppz_fkmm.BackSource
@@ -14,11 +7,10 @@ namespace ppz_fkmm.BackSource
     {
         public MainWindow _mainWindow;
 
-        public AuthenticationControler _authenticationControler;
-        public LayoutControler _layoutControler;
-        public PagesControler _pagesControler;
-        private readonly HttpControler _httpControler;
-
+        public readonly AuthenticationControler _authenticationControler;
+        public readonly LayoutControler _layoutControler;
+        public readonly PagesControler _pagesControler;
+        public HttpControler _httpControler;
 
         public Program()
         {

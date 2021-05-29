@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
 using ppz_fkmm.FrontSource.Pages;
 
@@ -11,8 +7,8 @@ namespace ppz_fkmm.BackSource
 {
     public class PagesControler
     {
-        private Program _program;
-        private Dictionary<string, UserControl> _dictionary;
+        private readonly Program _program;
+        private readonly Dictionary<string, UserControl> _dictionary;
 
         public PagesControler(Program program)
         {
@@ -20,7 +16,7 @@ namespace ppz_fkmm.BackSource
 
             _dictionary = new Dictionary<string, UserControl>()
             {
-                { "LoginPage",      new LoginPage(this, _program._layoutControler, _program._authenticationControler) },
+                { "LoginPage",      new LoginPage(_program) },
                 { "RegisterPage",   new RegisterPage(this, _program._layoutControler, _program._authenticationControler) },
                 { "MainPage",       new MainPage() }
             };

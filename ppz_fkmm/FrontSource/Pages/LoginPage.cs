@@ -1,36 +1,44 @@
 ﻿using System;
 using System.Windows.Forms;
 using ppz_fkmm.BackSource;
-using ppz_fkmm.BackSource.Controls;
-
+using ppz_fkmm.BackSource.EndPoints;
+using ppz_fkmm.BackSource.DataModels;
 
 namespace ppz_fkmm.FrontSource.Pages
 {
     public partial class LoginPage : UserControl
     {
-        PagesControler _pagesControler;
-        LayoutControler _layoutControler;
-        AuthenticationControler _authenticationControler;
+        Program _program;
 
-        public LoginPage(PagesControler pagesControler, LayoutControler layoutControler, AuthenticationControler authenticationControler)
+         public LoginPage(Program program)
         {
-            _pagesControler = pagesControler;
-            _layoutControler = layoutControler;
-            _authenticationControler = authenticationControler;
+            _program = program;
             InitializeComponent();
         }
         private void LogInBtn_Click(object sender, EventArgs e)
         {
-            if (_authenticationControler.Login(UsernameTxt.Text, PasswordTxt.Text))
+            if (_program._authenticationControler.Login(UsernameTxt.Text, PasswordTxt.Text))
             {
-                _layoutControler.ChangeLayout("ThreeWingedLayout");
-                _pagesControler.PushPage("MainPage");
+                _program._layoutControler.ChangeLayout("ThreeWingedLayout");
+                _program._pagesControler.PushPage("MainPage");
             }
         }
 
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
-            _pagesControler.PushPage("RegisterPage");
+            GetDataExample();
+            _program._pagesControler.PushPage("RegisterPage");
+        }
+
+        private async void GetDataExample()
+        {
+            EndPointControler<BeerModel> beerEndPoint = new EndPointControler<BeerModel>();
+            var models = await beerEndPoint.LoadData("https://bhtjsvntyg.execute-api.eu-central-1.amazonaws.com/dev/beer", _program._httpControler);
+
+            foreach (BeerModel model in models)
+            {
+                Console.WriteLine(model.Id + "  " + model.Name);
+            }
         }
     }
 }

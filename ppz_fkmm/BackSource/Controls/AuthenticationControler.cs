@@ -1,5 +1,4 @@
 ﻿
-
 namespace ppz_fkmm.BackSource.Controls
 {
     public class AuthenticationControler

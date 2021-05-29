@@ -8,9 +8,9 @@ namespace ppz_fkmm.FrontSource.Pages
 {
     public partial class RegisterPage : UserControl
     {
-        PagesControler _pagesControler;
-        LayoutControler _layoutControler;
-        AuthenticationControler _authenticationControler;
+        readonly PagesControler _pagesControler;
+        readonly LayoutControler _layoutControler;
+        readonly AuthenticationControler _authenticationControler;
 
         public RegisterPage(PagesControler pagesControler, LayoutControler layoutControler, AuthenticationControler authenticationControler)
         {
