@@ -35,6 +35,8 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,14 +56,77 @@
   <ItemGroup>
     <Compile Include="BackSource\ApiHttpHelper.cs" />
     <Compile Include="BackSource\BreweriesModel.cs" />
-    <Compile Include="FrontSource\MainClass.cs" />
+    
+    <Compile Include="BackSource\Controls\AuthenticationControler.cs" />
+    <Compile Include="BackSource\Controls\LayoutControler.cs" />
+    <Compile Include="BackSource\LayoutBuilder.cs" />
+    <Compile Include="BackSource\Controls\PagesControler.cs" />
+    <Compile Include="FrontSource\Components\GeneralButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FrontSource\Pages\RegisterPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrontSource\Pages\RegisterPage.Designer.cs">
+      <DependentUpon>RegisterPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontSource\Pages\MainPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrontSource\Pages\MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontSource\Structures\Layout.cs" />
+    <Compile Include="FrontSource\Structures\PlainLayout.cs" />
+    <Compile Include="FrontSource\Structures\ThreeWingedLayout.cs" />
+    <Compile Include="FrontSource\Pages\LoginPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrontSource\Pages\LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainClass.cs" />
     <Compile Include="BackSource\Program.cs" />
-    <Compile Include="FrontSource\MainWindow.cs">
-      <SubType>Form</SubType>
+    <Compile Include="FrontSource\Structures\MainWindow.cs" />
+    <Compile Include="FrontSource\Pages\Page1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrontSource\Pages\Page1.Designer.cs">
+      <DependentUpon>Page1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontSource\Pages\Page2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrontSource\Pages\Page2.Designer.cs">
+      <DependentUpon>Page2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontSource\Pages\Page3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrontSource\Pages\Page3.Designer.cs">
+      <DependentUpon>Page3.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrontSource\MainWindow.resx">
+    <EmbeddedResource Include="FrontSource\Pages\MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontSource\Pages\RegisterPage.resx">
+      <DependentUpon>RegisterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontSource\Structures\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontSource\Pages\Page1.resx">
+      <DependentUpon>Page1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontSource\Pages\Page2.resx">
+      <DependentUpon>Page2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontSource\Pages\Page3.resx">
+      <DependentUpon>Page3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontSource\Pages\LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
