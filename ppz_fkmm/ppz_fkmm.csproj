@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BackSource\Controls\AuthenticationControler.cs" />
+    <Compile Include="BackSource\Controls\HttpControler.cs" />
     <Compile Include="BackSource\Controls\LayoutControler.cs" />
     <Compile Include="BackSource\LayoutBuilder.cs" />
     <Compile Include="BackSource\Controls\PagesControler.cs" />
@@ -143,6 +144,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="BackSource\DataModels\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

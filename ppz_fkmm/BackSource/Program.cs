@@ -17,6 +17,7 @@ namespace ppz_fkmm.BackSource
         public AuthenticationControler _authenticationControler;
         public LayoutControler _layoutControler;
         public PagesControler _pagesControler;
+        private readonly HttpControler _httpControler;
 
 
         public Program()
@@ -26,9 +27,11 @@ namespace ppz_fkmm.BackSource
             _authenticationControler = new AuthenticationControler();
             _layoutControler = new LayoutControler(_mainWindow);
             _pagesControler = new PagesControler(this);
+            _httpControler = new HttpControler();
 
             _layoutControler.ChangeLayout("PlainLayout");
             _pagesControler.PushPage("LoginPage");
+            _httpControler.InitializeClient();
 
             Application.Run(_mainWindow._form);
         }
