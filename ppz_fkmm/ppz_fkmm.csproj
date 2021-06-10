@@ -74,6 +74,30 @@
     <Compile Include="FrontSource\Pages\MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrontSource\Pages\SearchResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrontSource\Pages\SearchResult.Designer.cs">
+      <DependentUpon>SearchResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontSource\Pages\Settings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrontSource\Pages\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontSource\Pages\SideMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrontSource\Pages\SideMenu.Designer.cs">
+      <DependentUpon>SideMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontSource\Pages\YourBeers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrontSource\Pages\YourBeers.Designer.cs">
+      <DependentUpon>YourBeers.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrontSource\Structures\Layout.cs" />
     <Compile Include="FrontSource\Structures\PlainLayout.cs" />
     <Compile Include="FrontSource\Structures\ThreeWingedLayout.cs" />
@@ -110,6 +134,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrontSource\Pages\RegisterPage.resx">
       <DependentUpon>RegisterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontSource\Pages\SearchResult.resx">
+      <DependentUpon>SearchResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontSource\Pages\SideMenu.resx">
+      <DependentUpon>SideMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontSource\Pages\YourBeers.resx">
+      <DependentUpon>YourBeers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontSource\Structures\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
