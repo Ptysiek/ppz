@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ppz_fkmm.FrontSource.Pages
 {
-    public partial class SideMenu : UserControl
+    public partial class MenuShopPanel : UserControl
     {
-        public SideMenu()
+        public MenuShopPanel()
         {
             InitializeComponent();
         }

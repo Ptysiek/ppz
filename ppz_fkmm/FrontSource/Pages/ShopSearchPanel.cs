@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ppz_fkmm.FrontSource.Pages
 {
-    public partial class SearchResult : UserControl
+    public partial class ShopSearchPanel : UserControl
     {
-        public SearchResult()
+        public ShopSearchPanel()
         {
             InitializeComponent();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ppz_fkmm.FrontSource.Pages
 {
-    public partial class YourBeers : UserControl
+    public partial class SettingsPanel : UserControl
     {
-        public YourBeers()
+        public SettingsPanel()
         {
             InitializeComponent();
         }
