@@ -25,5 +25,18 @@ namespace ppz_fkmm.BackSource.EndPoints
                 throw new Exception(response.ReasonPhrase);
             }
         }
+        public async Task SendData(string url, HttpControler httpControler, HttpContent content)
+        {
+            using (HttpResponseMessage response = await httpControler.ApiClient.PostAsync(url, content))
+            {
+                if (response.IsSuccessStatusCode)
+                {
+                    //await response.Content.CreateAsAsync<List<ModelTemplate>>();
+                    return;
+                    //return models;
+                }
+                throw new Exception(response.ReasonPhrase);
+            }
+        }
     }
 }
