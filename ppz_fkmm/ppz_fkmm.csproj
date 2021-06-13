@@ -62,11 +62,23 @@
     <Compile Include="FrontSource\Components\GeneralButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="FrontSource\Pages\RegisterPage.cs">
+    <Compile Include="FrontSource\Pages\LoginPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FrontSource\Pages\RegisterPage.Designer.cs">
-      <DependentUpon>RegisterPage.cs</DependentUpon>
+    <Compile Include="FrontSource\Pages\LoginPanel.Designer.cs">
+      <DependentUpon>LoginPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontSource\Pages\MenuShopPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrontSource\Pages\MenuShopPanel.Designer.cs">
+      <DependentUpon>MenuShopPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontSource\Pages\MenuUserPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrontSource\Pages\MenuUserPanel.Designer.cs">
+      <DependentUpon>MenuUserPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontSource\Pages\MainPage.cs">
       <SubType>UserControl</SubType>
@@ -74,29 +86,41 @@
     <Compile Include="FrontSource\Pages\MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontSource\Pages\SearchResult.cs">
+    <Compile Include="FrontSource\Pages\RegisterPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FrontSource\Pages\SearchResult.Designer.cs">
-      <DependentUpon>SearchResult.cs</DependentUpon>
+    <Compile Include="FrontSource\Pages\RegisterPanel.Designer.cs">
+      <DependentUpon>RegisterPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontSource\Pages\Settings.cs">
+    <Compile Include="FrontSource\Pages\SettingsPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FrontSource\Pages\Settings.Designer.cs">
-      <DependentUpon>Settings.cs</DependentUpon>
+    <Compile Include="FrontSource\Pages\SettingsPanel.Designer.cs">
+      <DependentUpon>SettingsPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontSource\Pages\SideMenu.cs">
+    <Compile Include="FrontSource\Pages\ShopResultSearch.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FrontSource\Pages\SideMenu.Designer.cs">
-      <DependentUpon>SideMenu.cs</DependentUpon>
+    <Compile Include="FrontSource\Pages\ShopResultSearch.Designer.cs">
+      <DependentUpon>ShopResultSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrontSource\Pages\YourBeers.cs">
+    <Compile Include="FrontSource\Pages\ShopSearchPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FrontSource\Pages\YourBeers.Designer.cs">
-      <DependentUpon>YourBeers.cs</DependentUpon>
+    <Compile Include="FrontSource\Pages\ShopSearchPanel.Designer.cs">
+      <DependentUpon>ShopSearchPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontSource\Pages\UserResultSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrontSource\Pages\UserResultSearch.Designer.cs">
+      <DependentUpon>UserResultSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontSource\Pages\UserSearchPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrontSource\Pages\UserSearchPanel.Designer.cs">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="FrontSource\Structures\Layout.cs" />
     <Compile Include="FrontSource\Structures\PlainLayout.cs" />
@@ -129,20 +153,35 @@
       <DependentUpon>Page3.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrontSource\Pages\LoginPanel.resx">
+      <DependentUpon>LoginPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrontSource\Pages\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontSource\Pages\RegisterPage.resx">
-      <DependentUpon>RegisterPage.cs</DependentUpon>
+    <EmbeddedResource Include="FrontSource\Pages\MenuShopPanel.resx">
+      <DependentUpon>MenuShopPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontSource\Pages\SearchResult.resx">
-      <DependentUpon>SearchResult.cs</DependentUpon>
+    <EmbeddedResource Include="FrontSource\Pages\MenuUserPanel.resx">
+      <DependentUpon>MenuUserPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontSource\Pages\SideMenu.resx">
-      <DependentUpon>SideMenu.cs</DependentUpon>
+    <EmbeddedResource Include="FrontSource\Pages\RegisterPanel.resx">
+      <DependentUpon>RegisterPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrontSource\Pages\YourBeers.resx">
-      <DependentUpon>YourBeers.cs</DependentUpon>
+    <EmbeddedResource Include="FrontSource\Pages\SettingsPanel.resx">
+      <DependentUpon>SettingsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontSource\Pages\ShopResultSearch.resx">
+      <DependentUpon>ShopResultSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontSource\Pages\ShopSearchPanel.resx">
+      <DependentUpon>ShopSearchPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontSource\Pages\UserResultSearch.resx">
+      <DependentUpon>UserResultSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontSource\Pages\UserSearchPanel.resx">
+      <DependentUpon>UserSearchPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontSource\Structures\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
