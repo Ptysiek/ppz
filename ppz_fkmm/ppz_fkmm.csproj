@@ -86,6 +86,12 @@
     <Compile Include="FrontSource\Pages\MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrontSource\Pages\RegisterPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrontSource\Pages\RegisterPage.designer.cs">
+      <DependentUpon>RegisterPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrontSource\Pages\RegisterPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrontSource\Pages\MenuUserPanel.resx">
       <DependentUpon>MenuUserPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontSource\Pages\RegisterPage.resx">
+      <DependentUpon>RegisterPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrontSource\Pages\RegisterPanel.resx">
       <DependentUpon>RegisterPanel.cs</DependentUpon>
