@@ -7,16 +7,14 @@ namespace ppz_fkmm.BackSource
     {
         public MainWindow _mainWindow;
 
-        public readonly AuthenticationControler _authenticationControler;
         public readonly LayoutControler _layoutControler;
         public readonly PagesControler _pagesControler;
-        public HttpControler _httpControler;
+        public readonly HttpControler _httpControler;
 
         public Program()
         {
             _mainWindow = new MainWindow();
 
-            _authenticationControler = new AuthenticationControler();
             _layoutControler = new LayoutControler(_mainWindow);
             _pagesControler = new PagesControler(this);
             _httpControler = new HttpControler();

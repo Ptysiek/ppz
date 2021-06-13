@@ -25,17 +25,26 @@ namespace ppz_fkmm.BackSource.EndPoints
                 throw new Exception(response.ReasonPhrase);
             }
         }
-        public async Task SendData(string url, HttpControler httpControler, HttpContent content)
+        public async Task<List<ModelTemplate>> SendData(string url, HttpControler httpControler, HttpContent content)
         {
             using (HttpResponseMessage response = await httpControler.ApiClient.PostAsync(url, content))
             {
                 if (response.IsSuccessStatusCode)
                 {
-                    //await response.Content.CreateAsAsync<List<ModelTemplate>>();
-                    return;
-                    //return models;
+                    List<ModelTemplate> models = await response.Content.ReadAsAsync<List<ModelTemplate>>();
+                    /*
+                    var str = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine(str);
+                    Console.WriteLine(response.StatusCode);
+                    //*/
+                    return models;
+                    //return true;
                 }
-                throw new Exception(response.ReasonPhrase);
+                Console.WriteLine(response.StatusCode);
+                Console.WriteLine(response.ReasonPhrase);
+                Console.WriteLine(response.Content.ReadAsStringAsync().Result);
+                //throw new Exception(response.ReasonPhrase);
+                return new List<ModelTemplate>();
             }
         }
     }

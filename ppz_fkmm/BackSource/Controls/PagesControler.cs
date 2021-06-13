@@ -16,8 +16,8 @@ namespace ppz_fkmm.BackSource
 
             _dictionary = new Dictionary<string, UserControl>()
             {
-                { "LoginPage",      new LoginPage(_program) },
-                //{ "RegisterPage",   new RegisterPage(this, _program._layoutControler, _program._authenticationControler) },
+                { "LoginPage",      new LoginPanel(_program) },
+                { "RegisterPage",   new RegisterPanel(_program) },
                 { "MainPage",       new MainPage() }
             };
         }

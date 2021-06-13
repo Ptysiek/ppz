@@ -22,12 +22,14 @@ namespace ppz_fkmm.FrontSource.Pages
 
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
+            /*
             if (_authenticationControler.Login(UsernameTxt.Text, PasswordTxt.Text))
             {
                 _pagesControler.PopPage();
                 _layoutControler.ChangeLayout("ThreeWingedLayout");
                 _pagesControler.PushPage("MainPage");
             }
+            */
         }
         private void LogInBtn_Click(object sender, EventArgs e)
         {

@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using ppz_fkmm.BackSource;
 using ppz_fkmm.BackSource.EndPoints;
 using ppz_fkmm.BackSource.DataModels;
+using System.Net.Http;
 
 namespace ppz_fkmm.FrontSource.Pages
 {
@@ -17,17 +18,31 @@ namespace ppz_fkmm.FrontSource.Pages
         }
         private void LogInBtn_Click(object sender, EventArgs e)
         {
+            SendExample();
+            /*
             if (_program._authenticationControler.Login(UsernameTxt.Text, PasswordTxt.Text))
             {
                 _program._layoutControler.ChangeLayout("ThreeWingedLayout");
                 _program._pagesControler.PushPage("MainPage");
             }
+            */
         }
 
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
-            GetDataExample();
+            //GetDataExample();
             _program._pagesControler.PushPage("RegisterPage");
+        }
+
+        private async void SendExample()
+        {
+            /*
+            var data = "{\"login\": \"testLogin\", \"password\": \"test1234\", \"type\": \"client\", \"city\": \"testCity\"}";
+            HttpContent content = new StringContent(data);
+
+            EndPointControler<BeerModel> beerEndPoint = new EndPointControler<BeerModel>();
+            await beerEndPoint.SendData("https://bhtjsvntyg.execute-api.eu-central-1.amazonaws.com/dev/user", _program._httpControler, content);
+            */
         }
 
         private async void GetDataExample()
