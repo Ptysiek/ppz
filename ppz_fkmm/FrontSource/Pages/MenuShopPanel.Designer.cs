@@ -44,6 +44,7 @@ namespace ppz_fkmm.FrontSource.Pages
             this.MenuBtnShopSearch.TabIndex = 0;
             this.MenuBtnShopSearch.Text = "Wyszukaj Piwo";
             this.MenuBtnShopSearch.UseVisualStyleBackColor = true;
+            this.MenuBtnShopSearch.Click += new System.EventHandler(this.MenuBtnShopSearch_Click);
             // 
             // MenuBtnShopBeer
             // 
@@ -64,6 +65,7 @@ namespace ppz_fkmm.FrontSource.Pages
             this.MenuBtnShopSettings.TabIndex = 2;
             this.MenuBtnShopSettings.Text = "Ustawienia";
             this.MenuBtnShopSettings.UseVisualStyleBackColor = true;
+            this.MenuBtnShopSettings.Click += new System.EventHandler(this.MenuBtnShopSettings_Click);
             // 
             // MenuBtnShopLogout
             // 

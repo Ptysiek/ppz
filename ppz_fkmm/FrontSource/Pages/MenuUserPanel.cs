@@ -25,7 +25,17 @@ namespace ppz_fkmm.FrontSource.Pages
         private void MenuBtnUserLogout_Click(object sender, EventArgs e)
         {
             _program._layoutControler.ChangeLayout("PlainLayout");
-            _program._pagesControler.PopPage();
+            _program._pagesControler.PushPage("LoginPage");
+        }
+
+        private void MenuBtnUserSettings_Click(object sender, EventArgs e)
+        {
+            _program._pagesControler.PushPage("SettingsPage");
+        }
+
+        private void MenuBtnUserSearch_Click(object sender, EventArgs e)
+        {
+            _program._pagesControler.PushPage("UserSearchPage");
         }
     }
 }

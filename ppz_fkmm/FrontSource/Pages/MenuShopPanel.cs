@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ppz_fkmm.FrontSource.Pages
 {
     public partial class MenuShopPanel : UserControl
@@ -23,8 +24,18 @@ namespace ppz_fkmm.FrontSource.Pages
 
         private void MenuBtnShopLogout_Click(object sender, EventArgs e)
         {
-            _program._layoutControler.ChangeLayout("PlainLayout");
-            _program._pagesControler.PopPage();
+            _program._layoutControler.ChangeLayout("PlainLayout"); 
+            _program._pagesControler.PushPage("LoginPage");
+        }
+
+        private void MenuBtnShopSettings_Click(object sender, EventArgs e)
+        {
+            _program._pagesControler.PushPage("SettingsPage");
+        }
+
+        private void MenuBtnShopSearch_Click(object sender, EventArgs e)
+        {
+            _program._pagesControler.PushPage("ShopSearchPage");
         }
     }
 }

@@ -38,7 +38,8 @@ namespace ppz_fkmm.FrontSource.Pages
                     _program._layoutControler.ChangeLayout("ThreeWingedUserLayout");
                     //ThreeWingedLayout tmp = (ThreeWingedLayout)_program._pagesControler.GetLayout();
                     //tmp.GetHorizontalSplitContainer();
-                    _program._pagesControler.PushPage("MainPage");
+                    //_program._pagesControler.PushPage("MainPage");
+                    _program._pagesControler.PushPage("UserSearchPage");
                 }
                 return;
             }
@@ -47,7 +48,8 @@ namespace ppz_fkmm.FrontSource.Pages
                 if (await Login(false))
                 {
                     _program._layoutControler.ChangeLayout("ThreeWingedShopLayout");
-                    _program._pagesControler.PushPage("MainPage");
+                    //_program._pagesControler.PushPage("MainPage");
+                    _program._pagesControler.PushPage("ShopSearchPage");
                 }
                 return;
             }

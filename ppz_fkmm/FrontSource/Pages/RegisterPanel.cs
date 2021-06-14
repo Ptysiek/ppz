@@ -41,12 +41,14 @@ namespace ppz_fkmm.FrontSource.Pages
                 if (registerUser.Checked)
                 {
                     _program._layoutControler.ChangeLayout("ThreeWingedUserLayout");
-                    _program._pagesControler.PushPage("MainPage");
+                    //_program._pagesControler.PushPage("MainPage");
+                    _program._pagesControler.PushPage("UserSearchPage");
                 }
                 else
                 {
                     _program._layoutControler.ChangeLayout("ThreeWingedShopLayout");
-                    _program._pagesControler.PushPage("MainPage");
+                    //_program._pagesControler.PushPage("MainPage");
+                    _program._pagesControler.PushPage("ShopSearchPage");
                 }
             }
         }

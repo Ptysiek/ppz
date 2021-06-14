@@ -18,7 +18,10 @@ namespace ppz_fkmm.BackSource
             {
                 { "LoginPage",      new LoginPanel(_program) },
                 { "RegisterPage",   new RegisterPanel(_program) },
-                { "MainPage",       new MainPage() }
+                { "MainPage",       new MainPage() },
+                { "SettingsPage",   new SettingsPanel() },
+                { "ShopSearchPage", new ShopSearchPanel() },
+                { "UserSearchPage", new UserSearchPanel() }
             };
         }
         public Layout GetLayout()
