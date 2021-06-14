@@ -46,7 +46,7 @@ namespace ppz_fkmm.FrontSource.Pages
             // registerName
             // 
             this.registerName.Location = new System.Drawing.Point(233, 63);
-            this.registerName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerName.Margin = new System.Windows.Forms.Padding(4);
             this.registerName.Name = "registerName";
             this.registerName.Size = new System.Drawing.Size(132, 22);
             this.registerName.TabIndex = 0;
@@ -54,7 +54,7 @@ namespace ppz_fkmm.FrontSource.Pages
             // registerAdress
             // 
             this.registerAdress.Location = new System.Drawing.Point(233, 159);
-            this.registerAdress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerAdress.Margin = new System.Windows.Forms.Padding(4);
             this.registerAdress.Name = "registerAdress";
             this.registerAdress.Size = new System.Drawing.Size(132, 22);
             this.registerAdress.TabIndex = 1;
@@ -62,7 +62,7 @@ namespace ppz_fkmm.FrontSource.Pages
             // registerEmail
             // 
             this.registerEmail.Location = new System.Drawing.Point(233, 127);
-            this.registerEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerEmail.Margin = new System.Windows.Forms.Padding(4);
             this.registerEmail.Name = "registerEmail";
             this.registerEmail.Size = new System.Drawing.Size(132, 22);
             this.registerEmail.TabIndex = 2;
@@ -70,7 +70,7 @@ namespace ppz_fkmm.FrontSource.Pages
             // registerPass
             // 
             this.registerPass.Location = new System.Drawing.Point(233, 95);
-            this.registerPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerPass.Margin = new System.Windows.Forms.Padding(4);
             this.registerPass.Name = "registerPass";
             this.registerPass.Size = new System.Drawing.Size(132, 22);
             this.registerPass.TabIndex = 3;
@@ -78,17 +78,18 @@ namespace ppz_fkmm.FrontSource.Pages
             // registerBtnRegister
             // 
             this.registerBtnRegister.Location = new System.Drawing.Point(165, 308);
-            this.registerBtnRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerBtnRegister.Margin = new System.Windows.Forms.Padding(4);
             this.registerBtnRegister.Name = "registerBtnRegister";
             this.registerBtnRegister.Size = new System.Drawing.Size(100, 28);
             this.registerBtnRegister.TabIndex = 4;
             this.registerBtnRegister.Text = "ZAREJESTRUJ";
             this.registerBtnRegister.UseVisualStyleBackColor = true;
+            this.registerBtnRegister.Click += new System.EventHandler(this.registerBtnRegister_Click);
             // 
             // registerBtnCancel
             // 
             this.registerBtnCancel.Location = new System.Drawing.Point(311, 308);
-            this.registerBtnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerBtnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.registerBtnCancel.Name = "registerBtnCancel";
             this.registerBtnCancel.Size = new System.Drawing.Size(100, 28);
             this.registerBtnCancel.TabIndex = 5;
@@ -100,7 +101,7 @@ namespace ppz_fkmm.FrontSource.Pages
             // 
             this.registerUser.AutoSize = true;
             this.registerUser.Location = new System.Drawing.Point(233, 207);
-            this.registerUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerUser.Margin = new System.Windows.Forms.Padding(4);
             this.registerUser.Name = "registerUser";
             this.registerUser.Size = new System.Drawing.Size(97, 21);
             this.registerUser.TabIndex = 6;
@@ -112,7 +113,7 @@ namespace ppz_fkmm.FrontSource.Pages
             // 
             this.registerShop.AutoSize = true;
             this.registerShop.Location = new System.Drawing.Point(233, 235);
-            this.registerShop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerShop.Margin = new System.Windows.Forms.Padding(4);
             this.registerShop.Name = "registerShop";
             this.registerShop.Size = new System.Drawing.Size(62, 21);
             this.registerShop.TabIndex = 7;
@@ -176,7 +177,7 @@ namespace ppz_fkmm.FrontSource.Pages
             this.Controls.Add(this.registerEmail);
             this.Controls.Add(this.registerAdress);
             this.Controls.Add(this.registerName);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegisterPanel";
             this.Size = new System.Drawing.Size(677, 527);
             this.ResumeLayout(false);

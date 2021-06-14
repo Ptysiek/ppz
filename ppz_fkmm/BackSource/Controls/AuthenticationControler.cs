@@ -34,8 +34,17 @@ namespace ppz_fkmm.BackSource.Controls
             return "";
         }
 
-        public bool Register(string username, string password)
+        public async Task<bool> Register(HttpControler httpControler,  string username, string password)
         {
+            var url = "https://bhtjsvntyg.execute-api.eu-central-1.amazonaws.com/dev/user";
+            var data = "{\"login\": \"" + username + "\", \"password\": \"" + password + "\", \"city\": \"testCity\", \"street\": \"testStreet\"}";
+            HttpContent content = new StringContent(data);
+
+            using (HttpResponseMessage response = await httpControler.ApiClient.PostAsync(url, content))
+            {
+                error = response.Content.ReadAsStringAsync().Result;
+                errorCode = response.ReasonPhrase;
+            }
             return true;
         }
     }
