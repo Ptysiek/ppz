@@ -4,13 +4,15 @@ namespace ppz_fkmm.BackSource.Controls
 {
     public class LayoutControler
     {
+        Program _program;
         private MainWindow _mainWindow;
         private LayoutBuilder _layoutBuilder;
 
-        public LayoutControler(MainWindow mainWindow)
+        public LayoutControler(MainWindow mainWindow, Program program)
         {
+            _program = program;
             _mainWindow = mainWindow;
-            _layoutBuilder = new LayoutBuilder(mainWindow._form);
+            _layoutBuilder = new LayoutBuilder(mainWindow._form, program);
         }
 
         public bool ChangeLayout(string key)
@@ -37,9 +39,14 @@ namespace ppz_fkmm.BackSource.Controls
                 _mainWindow._layout = _layoutBuilder.GetPlainLayout();
                 return true;
             }
-            if (key == "ThreeWingedLayout")
+            if (key == "ThreeWingedUserLayout")
             {
-                _mainWindow._layout = _layoutBuilder.GetThreeWingedLayout();
+                _mainWindow._layout = _layoutBuilder.GetThreeWingedUserLayout();
+                return true;
+            }
+            if (key == "ThreeWingedShopLayout")
+            {
+                _mainWindow._layout = _layoutBuilder.GetThreeWingedShopLayout();
                 return true;
             }
             return false;

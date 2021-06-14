@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
 using ppz_fkmm.FrontSource.Pages;
-
+using ppz_fkmm.FrontSource.Structures;
 
 namespace ppz_fkmm.BackSource
 {
@@ -20,6 +20,10 @@ namespace ppz_fkmm.BackSource
                 { "RegisterPage",   new RegisterPanel(_program) },
                 { "MainPage",       new MainPage() }
             };
+        }
+        public Layout GetLayout()
+        {
+            return _program._mainWindow._layout;
         }
 
         public bool PushPage(string key)

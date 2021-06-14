@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ppz_fkmm.BackSource;
-using ppz_fkmm.FrontSource.Structures;
+using ppz_fkmm.FrontSource.Pages;
 
 using System.ComponentModel;
 using System.Data;
@@ -17,13 +17,15 @@ using AutoMapper;
 
 namespace ppz_fkmm.FrontSource.Structures
 {
-    class ThreeWingedLayout : Layout
+    class ThreeWingedUserLayout : Layout
     {
+        Program _program;
         public SplitContainer _horizontalSplitContainer;
         public SplitContainer _verticalSplitContainer;
 
-        public ThreeWingedLayout()
+        public ThreeWingedUserLayout(Program program)
         {
+            _program = program;
             _horizontalSplitContainer = GetHorizontalSplitContainer();
             _verticalSplitContainer = GetVerticalSplitContainer();
 
@@ -82,6 +84,11 @@ namespace ppz_fkmm.FrontSource.Structures
             };
             result.Panel1.BackColor = SystemColors.ControlLight;
             result.Panel2.BackColor = SystemColors.ControlLight;
+
+            var page = new MenuUserPanel(_program) {
+                Dock = DockStyle.Fill
+            };
+            result.Panel1.Controls.Add(page);
 
             return result;
         }

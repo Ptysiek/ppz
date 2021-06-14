@@ -12,7 +12,7 @@ using ppz_fkmm.BackSource.EndPoints;
 using ppz_fkmm.BackSource.DataModels;
 using System.Net.Http;
 using ppz_fkmm.BackSource.Controls;
-
+using ppz_fkmm.FrontSource.Structures;
 
 namespace ppz_fkmm.FrontSource.Pages
 {
@@ -35,7 +35,9 @@ namespace ppz_fkmm.FrontSource.Pages
             {
                 if (await Login(true))
                 {
-                    _program._layoutControler.ChangeLayout("ThreeWingedLayout");
+                    _program._layoutControler.ChangeLayout("ThreeWingedUserLayout");
+                    //ThreeWingedLayout tmp = (ThreeWingedLayout)_program._pagesControler.GetLayout();
+                    //tmp.GetHorizontalSplitContainer();
                     _program._pagesControler.PushPage("MainPage");
                 }
                 return;
@@ -44,7 +46,7 @@ namespace ppz_fkmm.FrontSource.Pages
             {
                 if (await Login(false))
                 {
-                    _program._layoutControler.ChangeLayout("ThreeWingedLayout");
+                    _program._layoutControler.ChangeLayout("ThreeWingedShopLayout");
                     _program._pagesControler.PushPage("MainPage");
                 }
                 return;

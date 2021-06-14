@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ppz_fkmm.BackSource;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,13 +9,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ppz_fkmm.FrontSource.Pages
 {
     public partial class MenuUserPanel : UserControl
     {
-        public MenuUserPanel()
+        Program _program;
+
+        public MenuUserPanel(Program program)
         {
+            _program = program;
             InitializeComponent();
+        }
+
+        private void MenuBtnUserLogout_Click(object sender, EventArgs e)
+        {
+            _program._layoutControler.ChangeLayout("PlainLayout");
+            _program._pagesControler.PopPage();
         }
     }
 }

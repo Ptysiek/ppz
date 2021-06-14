@@ -37,50 +37,56 @@ namespace ppz_fkmm.FrontSource.Pages
             // 
             // MenuBtnUserSearch
             // 
-            this.MenuBtnUserSearch.Location = new System.Drawing.Point(3, 3);
+            this.MenuBtnUserSearch.Location = new System.Drawing.Point(4, 4);
+            this.MenuBtnUserSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MenuBtnUserSearch.Name = "MenuBtnUserSearch";
-            this.MenuBtnUserSearch.Size = new System.Drawing.Size(89, 23);
+            this.MenuBtnUserSearch.Size = new System.Drawing.Size(119, 28);
             this.MenuBtnUserSearch.TabIndex = 0;
             this.MenuBtnUserSearch.Text = "Wyszukaj Piwo";
             this.MenuBtnUserSearch.UseVisualStyleBackColor = true;
             // 
             // MenuBtnUserBeer
             // 
-            this.MenuBtnUserBeer.Location = new System.Drawing.Point(3, 32);
+            this.MenuBtnUserBeer.Location = new System.Drawing.Point(4, 39);
+            this.MenuBtnUserBeer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MenuBtnUserBeer.Name = "MenuBtnUserBeer";
-            this.MenuBtnUserBeer.Size = new System.Drawing.Size(89, 23);
+            this.MenuBtnUserBeer.Size = new System.Drawing.Size(119, 28);
             this.MenuBtnUserBeer.TabIndex = 1;
             this.MenuBtnUserBeer.Text = "Twoje Piwa";
             this.MenuBtnUserBeer.UseVisualStyleBackColor = true;
             // 
             // MenuBtnUserSettings
             // 
-            this.MenuBtnUserSettings.Location = new System.Drawing.Point(3, 61);
+            this.MenuBtnUserSettings.Location = new System.Drawing.Point(4, 75);
+            this.MenuBtnUserSettings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MenuBtnUserSettings.Name = "MenuBtnUserSettings";
-            this.MenuBtnUserSettings.Size = new System.Drawing.Size(89, 23);
+            this.MenuBtnUserSettings.Size = new System.Drawing.Size(119, 28);
             this.MenuBtnUserSettings.TabIndex = 2;
             this.MenuBtnUserSettings.Text = "Ustawienia";
             this.MenuBtnUserSettings.UseVisualStyleBackColor = true;
             // 
             // MenuBtnUserLogout
             // 
-            this.MenuBtnUserLogout.Location = new System.Drawing.Point(3, 90);
+            this.MenuBtnUserLogout.Location = new System.Drawing.Point(4, 111);
+            this.MenuBtnUserLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MenuBtnUserLogout.Name = "MenuBtnUserLogout";
-            this.MenuBtnUserLogout.Size = new System.Drawing.Size(89, 23);
+            this.MenuBtnUserLogout.Size = new System.Drawing.Size(119, 28);
             this.MenuBtnUserLogout.TabIndex = 3;
             this.MenuBtnUserLogout.Text = "Wyloguj";
             this.MenuBtnUserLogout.UseVisualStyleBackColor = true;
+            this.MenuBtnUserLogout.Click += new System.EventHandler(this.MenuBtnUserLogout_Click);
             // 
             // MenuUserPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.MenuBtnUserLogout);
             this.Controls.Add(this.MenuBtnUserSettings);
             this.Controls.Add(this.MenuBtnUserBeer);
             this.Controls.Add(this.MenuBtnUserSearch);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MenuUserPanel";
-            this.Size = new System.Drawing.Size(97, 121);
+            this.Size = new System.Drawing.Size(129, 149);
             this.ResumeLayout(false);
 
         }

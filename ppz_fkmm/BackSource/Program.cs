@@ -15,7 +15,7 @@ namespace ppz_fkmm.BackSource
         {
             _mainWindow = new MainWindow();
 
-            _layoutControler = new LayoutControler(_mainWindow);
+            _layoutControler = new LayoutControler(_mainWindow, this);
             _pagesControler = new PagesControler(this);
             _httpControler = new HttpControler();
 

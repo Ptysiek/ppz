@@ -34,7 +34,7 @@ namespace ppz_fkmm.FrontSource.Pages
             _program._pagesControler.PushPage("RegisterPage");
         }
 
-        private async void SendExample()
+        private void SendExample()
         {
             /*
             var data = "{\"login\": \"testLogin\", \"password\": \"test1234\", \"type\": \"client\", \"city\": \"testCity\"}";

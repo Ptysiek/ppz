@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ppz_fkmm.BackSource;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,18 @@ namespace ppz_fkmm.FrontSource.Pages
 {
     public partial class MenuShopPanel : UserControl
     {
-        public MenuShopPanel()
+        Program _program;
+
+        public MenuShopPanel(Program program)
         {
+            _program = program;
             InitializeComponent();
+        }
+
+        private void MenuBtnShopLogout_Click(object sender, EventArgs e)
+        {
+            _program._layoutControler.ChangeLayout("PlainLayout");
+            _program._pagesControler.PopPage();
         }
     }
 }

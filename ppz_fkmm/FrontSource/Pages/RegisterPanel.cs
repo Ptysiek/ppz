@@ -38,11 +38,19 @@ namespace ppz_fkmm.FrontSource.Pages
                 return;
             }
             if (await Login()) {
-                _program._layoutControler.ChangeLayout("ThreeWingedLayout");
-                _program._pagesControler.PushPage("MainPage");
+                if (registerUser.Checked)
+                {
+                    _program._layoutControler.ChangeLayout("ThreeWingedUserLayout");
+                    _program._pagesControler.PushPage("MainPage");
+                }
+                else
+                {
+                    _program._layoutControler.ChangeLayout("ThreeWingedShopLayout");
+                    _program._pagesControler.PushPage("MainPage");
+                }
             }
         }
-
+         
         private async Task<bool> Register()
         {
             if (!registerUser.Checked && !registerShop.Checked) {

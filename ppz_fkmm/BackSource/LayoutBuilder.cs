@@ -11,10 +11,12 @@ namespace ppz_fkmm.BackSource
 {
     class LayoutBuilder
     {
+        Program _program;
         private Form _parentForm;
 
-        public LayoutBuilder(Form parentForm)
+        public LayoutBuilder(Form parentForm, Program program)
         {
+            _program = program;
             _parentForm = parentForm;
         }
 
@@ -27,11 +29,19 @@ namespace ppz_fkmm.BackSource
             return result;
         }
 
-        public ThreeWingedLayout GetThreeWingedLayout()
+        public ThreeWingedUserLayout GetThreeWingedUserLayout()
         {
             _parentForm.Controls.Clear();
 
-            ThreeWingedLayout result = new ThreeWingedLayout();
+            ThreeWingedUserLayout result = new ThreeWingedUserLayout(_program);
+            _parentForm.Controls.Add(result._horizontalSplitContainer);
+            return result;
+        }
+        public ThreeWingedShopLayout GetThreeWingedShopLayout()
+        {
+            _parentForm.Controls.Clear();
+
+            ThreeWingedShopLayout result = new ThreeWingedShopLayout(_program);
             _parentForm.Controls.Add(result._horizontalSplitContainer);
             return result;
         }

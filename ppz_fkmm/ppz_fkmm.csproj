@@ -130,7 +130,8 @@
     </Compile>
     <Compile Include="FrontSource\Structures\Layout.cs" />
     <Compile Include="FrontSource\Structures\PlainLayout.cs" />
-    <Compile Include="FrontSource\Structures\ThreeWingedLayout.cs" />
+    <Compile Include="FrontSource\Structures\ThreeWingedShopLayout.cs" />
+    <Compile Include="FrontSource\Structures\ThreeWingedUserLayout.cs" />
     <Compile Include="FrontSource\Pages\LoginPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
