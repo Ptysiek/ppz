@@ -31,33 +31,42 @@ namespace ppz_fkmm.FrontSource.Pages
         
         private async void loginBtnLogin_Click(object sender, EventArgs e)
         {
-            if (await Login())
+            if (loginUser.Checked)
             {
-                _program._layoutControler.ChangeLayout("ThreeWingedLayout");
-                _program._pagesControler.PushPage("MainPage");
+                if (await Login(true))
+                {
+                    _program._layoutControler.ChangeLayout("ThreeWingedLayout");
+                    _program._pagesControler.PushPage("MainPage");
+                }
+                return;
             }
+            if (loginShop.Checked)
+            {
+                if (await Login(false))
+                {
+                    _program._layoutControler.ChangeLayout("ThreeWingedLayout");
+                    _program._pagesControler.PushPage("MainPage");
+                }
+                return;
+            }
+            ErrorText.Text = "Choose User/Shop Login";         
         }
 
-        private async Task<bool> Login()
+        private async Task<bool> Login(bool user)
         {
             if (loginName.Text.Length == 0 || loginPass.Text.Length == 0)
             {
                 var error = "Credentials not given ";
                 ErrorText.Text = error;
-                Console.WriteLine(error);
                 return false;
             }
             AuthenticationControler authenticationControler = new AuthenticationControler();
-            var result = await authenticationControler.Login(_program._httpControler, loginName.Text, loginPass.Text);
+            string result = await authenticationControler.Login(_program._httpControler, loginName.Text, loginPass.Text, user);
 
-            if (result.Length == 0)
-            {
+            if (result.Length == 0) {
                 return true;
             }            
             ErrorText.Text = result;
-            Console.WriteLine("[" + loginName.Text + "   " + loginPass.Text + "]");
-            Console.WriteLine(authenticationControler.errorCode);
-            Console.WriteLine(authenticationControler.error);
             return false;
         }
     }

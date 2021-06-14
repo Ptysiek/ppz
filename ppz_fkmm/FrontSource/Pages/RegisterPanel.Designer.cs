@@ -41,6 +41,7 @@ namespace ppz_fkmm.FrontSource.Pages
             this.labelRAdress = new System.Windows.Forms.Label();
             this.labelREmail = new System.Windows.Forms.Label();
             this.labelRPass = new System.Windows.Forms.Label();
+            this.errorText = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // registerName
@@ -161,10 +162,20 @@ namespace ppz_fkmm.FrontSource.Pages
             this.labelRPass.TabIndex = 11;
             this.labelRPass.Text = "Hasło:";
             // 
+            // errorText
+            // 
+            this.errorText.AutoSize = true;
+            this.errorText.Location = new System.Drawing.Point(230, 260);
+            this.errorText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.errorText.Name = "errorText";
+            this.errorText.Size = new System.Drawing.Size(0, 17);
+            this.errorText.TabIndex = 12;
+            // 
             // RegisterPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.errorText);
             this.Controls.Add(this.labelRPass);
             this.Controls.Add(this.labelREmail);
             this.Controls.Add(this.labelRAdress);
@@ -199,5 +210,6 @@ namespace ppz_fkmm.FrontSource.Pages
         private System.Windows.Forms.Label labelRAdress;
         private System.Windows.Forms.Label labelREmail;
         private System.Windows.Forms.Label labelRPass;
+        private System.Windows.Forms.Label errorText;
     }
 }
