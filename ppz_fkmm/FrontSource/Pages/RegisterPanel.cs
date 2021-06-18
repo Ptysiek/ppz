@@ -27,17 +27,19 @@ namespace ppz_fkmm.FrontSource.Pages
             InitializeComponent();
         }
 
-        private void registerBtnCancel_Click(object sender, EventArgs e)
+        private void registerBtnCancel_Click_1(object sender, EventArgs e)
         {
             _program._pagesControler.PopPage();
         }
 
         private async void registerBtnRegister_Click(object sender, EventArgs e)
         {
-            if (!await Register()) {
+            if (!await Register())
+            {
                 return;
             }
-            if (await Login()) {
+            if (await Login())
+            {
                 if (registerUser.Checked)
                 {
                     _program._layoutControler.ChangeLayout("ThreeWingedUserLayout");
@@ -52,13 +54,14 @@ namespace ppz_fkmm.FrontSource.Pages
                 }
             }
         }
-         
+
         private async Task<bool> Register()
         {
-            if (!registerUser.Checked && !registerShop.Checked) {
+            if (!registerUser.Checked && !registerShop.Checked)
+            {
                 errorText.Text = "Choose User/Shop Login";
                 return false;
-            } 
+            }
             AuthenticationControler authenticationControler = new AuthenticationControler();
             await authenticationControler.Register(_program._httpControler, registerName.Text, registerPass.Text, registerUser.Checked);
             return true;
@@ -66,10 +69,11 @@ namespace ppz_fkmm.FrontSource.Pages
 
         private async Task<bool> Login()
         {
-            if (!registerUser.Checked && !registerShop.Checked) {
+            if (!registerUser.Checked && !registerShop.Checked)
+            {
                 errorText.Text = "Choose User/Shop Login";
                 return false;
-            }                        
+            }
             AuthenticationControler authenticationControler = new AuthenticationControler();
             var result = await authenticationControler.Login(_program._httpControler, registerName.Text, registerPass.Text, registerUser.Checked);
 

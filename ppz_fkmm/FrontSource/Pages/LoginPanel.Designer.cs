@@ -57,9 +57,10 @@ namespace ppz_fkmm.FrontSource.Pages
             this.flowLayoutPanel1.Controls.Add(this.loginBtnLogin);
             this.flowLayoutPanel1.Controls.Add(this.loginBtnRegister);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(453, 541);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(453, 540);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // labelLogin
@@ -67,8 +68,7 @@ namespace ppz_fkmm.FrontSource.Pages
             this.labelLogin.AutoSize = true;
             this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F);
             this.labelLogin.ForeColor = System.Drawing.Color.Snow;
-            this.labelLogin.Location = new System.Drawing.Point(4, 0);
-            this.labelLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelLogin.Location = new System.Drawing.Point(3, 0);
             this.labelLogin.Name = "labelLogin";
             this.labelLogin.Size = new System.Drawing.Size(94, 32);
             this.labelLogin.TabIndex = 6;
@@ -78,11 +78,11 @@ namespace ppz_fkmm.FrontSource.Pages
             // 
             this.loginName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.loginName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.loginName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.loginName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.loginName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F);
-            this.loginName.Location = new System.Drawing.Point(4, 36);
-            this.loginName.Margin = new System.Windows.Forms.Padding(4);
+            this.loginName.Location = new System.Drawing.Point(3, 36);
+            this.loginName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.loginName.MinimumSize = new System.Drawing.Size(445, 22);
             this.loginName.Name = "loginName";
             this.loginName.Size = new System.Drawing.Size(445, 39);
@@ -93,8 +93,7 @@ namespace ppz_fkmm.FrontSource.Pages
             this.labelPass.AutoSize = true;
             this.labelPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F);
             this.labelPass.ForeColor = System.Drawing.Color.Snow;
-            this.labelPass.Location = new System.Drawing.Point(4, 79);
-            this.labelPass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPass.Location = new System.Drawing.Point(3, 79);
             this.labelPass.Name = "labelPass";
             this.labelPass.Size = new System.Drawing.Size(147, 32);
             this.labelPass.TabIndex = 7;
@@ -104,11 +103,11 @@ namespace ppz_fkmm.FrontSource.Pages
             // 
             this.loginPass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.loginPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.loginPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.loginPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.loginPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F);
-            this.loginPass.Location = new System.Drawing.Point(4, 115);
-            this.loginPass.Margin = new System.Windows.Forms.Padding(4);
+            this.loginPass.Location = new System.Drawing.Point(3, 115);
+            this.loginPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.loginPass.Name = "loginPass";
             this.loginPass.Size = new System.Drawing.Size(445, 39);
             this.loginPass.TabIndex = 1;
@@ -118,8 +117,8 @@ namespace ppz_fkmm.FrontSource.Pages
             this.loginUser.AutoSize = true;
             this.loginUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F);
             this.loginUser.ForeColor = System.Drawing.Color.Snow;
-            this.loginUser.Location = new System.Drawing.Point(4, 162);
-            this.loginUser.Margin = new System.Windows.Forms.Padding(4);
+            this.loginUser.Location = new System.Drawing.Point(3, 162);
+            this.loginUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.loginUser.Name = "loginUser";
             this.loginUser.Size = new System.Drawing.Size(95, 36);
             this.loginUser.TabIndex = 2;
@@ -132,8 +131,8 @@ namespace ppz_fkmm.FrontSource.Pages
             this.loginShop.AutoSize = true;
             this.loginShop.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F);
             this.loginShop.ForeColor = System.Drawing.Color.Snow;
-            this.loginShop.Location = new System.Drawing.Point(4, 206);
-            this.loginShop.Margin = new System.Windows.Forms.Padding(4);
+            this.loginShop.Location = new System.Drawing.Point(3, 206);
+            this.loginShop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.loginShop.Name = "loginShop";
             this.loginShop.Size = new System.Drawing.Size(103, 36);
             this.loginShop.TabIndex = 3;
@@ -146,8 +145,7 @@ namespace ppz_fkmm.FrontSource.Pages
             this.ErrorText.AutoSize = true;
             this.ErrorText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F);
             this.ErrorText.ForeColor = System.Drawing.Color.Red;
-            this.ErrorText.Location = new System.Drawing.Point(4, 246);
-            this.ErrorText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ErrorText.Location = new System.Drawing.Point(3, 246);
             this.ErrorText.Name = "ErrorText";
             this.ErrorText.Size = new System.Drawing.Size(0, 32);
             this.ErrorText.TabIndex = 8;
@@ -158,10 +156,10 @@ namespace ppz_fkmm.FrontSource.Pages
             | System.Windows.Forms.AnchorStyles.Right)));
             this.loginBtnLogin.AutoSize = true;
             this.loginBtnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F);
-            this.loginBtnLogin.Location = new System.Drawing.Point(4, 282);
-            this.loginBtnLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.loginBtnLogin.Location = new System.Drawing.Point(3, 282);
+            this.loginBtnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.loginBtnLogin.Name = "loginBtnLogin";
-            this.loginBtnLogin.Size = new System.Drawing.Size(445, 42);
+            this.loginBtnLogin.Size = new System.Drawing.Size(445, 57);
             this.loginBtnLogin.TabIndex = 4;
             this.loginBtnLogin.Text = "Log In";
             this.loginBtnLogin.UseVisualStyleBackColor = true;
@@ -173,12 +171,12 @@ namespace ppz_fkmm.FrontSource.Pages
             | System.Windows.Forms.AnchorStyles.Right)));
             this.loginBtnRegister.AutoSize = true;
             this.loginBtnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F);
-            this.loginBtnRegister.Location = new System.Drawing.Point(4, 332);
-            this.loginBtnRegister.Margin = new System.Windows.Forms.Padding(4);
+            this.loginBtnRegister.Location = new System.Drawing.Point(3, 347);
+            this.loginBtnRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.loginBtnRegister.Name = "loginBtnRegister";
-            this.loginBtnRegister.Size = new System.Drawing.Size(445, 42);
+            this.loginBtnRegister.Size = new System.Drawing.Size(445, 57);
             this.loginBtnRegister.TabIndex = 5;
-            this.loginBtnRegister.Text = "Sign In";
+            this.loginBtnRegister.Text = "Register";
             this.loginBtnRegister.UseVisualStyleBackColor = true;
             this.loginBtnRegister.Click += new System.EventHandler(this.loginBtnRegister_Click);
             // 
@@ -187,9 +185,10 @@ namespace ppz_fkmm.FrontSource.Pages
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.panel1.Controls.Add(this.flowLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(15, 3);
+            this.panel1.Location = new System.Drawing.Point(5, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(459, 547);
+            this.panel1.Size = new System.Drawing.Size(459, 548);
             this.panel1.TabIndex = 11;
             // 
             // LoginPanel
@@ -198,9 +197,9 @@ namespace ppz_fkmm.FrontSource.Pages
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "LoginPanel";
-            this.Size = new System.Drawing.Size(489, 553);
+            this.Size = new System.Drawing.Size(473, 553);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
