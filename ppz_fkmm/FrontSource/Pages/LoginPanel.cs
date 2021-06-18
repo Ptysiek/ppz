@@ -1,18 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ppz_fkmm.BackSource;
-using ppz_fkmm.BackSource.EndPoints;
-using ppz_fkmm.BackSource.DataModels;
-using System.Net.Http;
 using ppz_fkmm.BackSource.Controls;
-using ppz_fkmm.FrontSource.Structures;
+
 
 namespace ppz_fkmm.FrontSource.Pages
 {
@@ -26,9 +17,12 @@ namespace ppz_fkmm.FrontSource.Pages
             InitializeComponent();
         }
 
-        private void loginBtnRegister_Click(object sender, EventArgs e)        
-        => _program._pagesControler.PushPage("RegisterPage");
-        
+        private void loginBtnRegister_Click(object sender, EventArgs e)
+        {
+            _program._pagesControler.PushPage("RegisterPage");
+            Cleanup();
+        }
+
         private async void loginBtnLogin_Click(object sender, EventArgs e)
         {
             if (loginUser.Checked)
@@ -36,10 +30,8 @@ namespace ppz_fkmm.FrontSource.Pages
                 if (await Login(true))
                 {
                     _program._layoutControler.ChangeLayout("ThreeWingedUserLayout");
-                    //ThreeWingedLayout tmp = (ThreeWingedLayout)_program._pagesControler.GetLayout();
-                    //tmp.GetHorizontalSplitContainer();
-                    //_program._pagesControler.PushPage("MainPage");
                     _program._pagesControler.PushPage("UserSearchPage");
+                    Cleanup();
                 }
                 return;
             }
@@ -48,8 +40,8 @@ namespace ppz_fkmm.FrontSource.Pages
                 if (await Login(false))
                 {
                     _program._layoutControler.ChangeLayout("ThreeWingedShopLayout");
-                    //_program._pagesControler.PushPage("MainPage");
                     _program._pagesControler.PushPage("ShopSearchPage");
+                    Cleanup();
                 }
                 return;
             }
@@ -72,6 +64,15 @@ namespace ppz_fkmm.FrontSource.Pages
             }            
             ErrorText.Text = result;
             return false;
+        }
+
+        private void Cleanup()
+        {
+            ErrorText.Text = "";
+            loginName.Text = "";
+            loginPass.Text = "";
+            loginUser.Checked = false;
+            loginShop.Checked = false;
         }
     }
 }

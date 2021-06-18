@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ppz_fkmm.BackSource;
@@ -30,6 +24,7 @@ namespace ppz_fkmm.FrontSource.Pages
         private void registerBtnCancel_Click_1(object sender, EventArgs e)
         {
             _program._pagesControler.PopPage();
+            Cleanup();
         }
 
         private async void registerBtnRegister_Click(object sender, EventArgs e)
@@ -43,15 +38,14 @@ namespace ppz_fkmm.FrontSource.Pages
                 if (registerUser.Checked)
                 {
                     _program._layoutControler.ChangeLayout("ThreeWingedUserLayout");
-                    //_program._pagesControler.PushPage("MainPage");
                     _program._pagesControler.PushPage("UserSearchPage");
                 }
                 else
                 {
                     _program._layoutControler.ChangeLayout("ThreeWingedShopLayout");
-                    //_program._pagesControler.PushPage("MainPage");
                     _program._pagesControler.PushPage("ShopSearchPage");
                 }
+                Cleanup();
             }
         }
 
@@ -85,6 +79,16 @@ namespace ppz_fkmm.FrontSource.Pages
             Console.WriteLine(authenticationControler.errorCode);
             Console.WriteLine(authenticationControler.error);
             return false;
+        }
+
+        private void Cleanup()
+        {
+            errorText.Text = "";
+            registerName.Text = "";
+            registerPass.Text = "";
+            registerCity.Text = "";
+            registerUser.Checked = false;
+            registerShop.Checked = false;
         }
     }
 }
