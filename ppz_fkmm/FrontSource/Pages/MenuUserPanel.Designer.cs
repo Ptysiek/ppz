@@ -53,6 +53,8 @@ namespace ppz_fkmm.FrontSource.Pages
             // 
             // MenuBtnUserBeer
             // 
+            this.MenuBtnUserBeer.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.MenuBtnUserBeer.Enabled = false;
             this.MenuBtnUserBeer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.MenuBtnUserBeer.Location = new System.Drawing.Point(4, 54);
             this.MenuBtnUserBeer.Margin = new System.Windows.Forms.Padding(4);
@@ -60,7 +62,7 @@ namespace ppz_fkmm.FrontSource.Pages
             this.MenuBtnUserBeer.Size = new System.Drawing.Size(226, 42);
             this.MenuBtnUserBeer.TabIndex = 1;
             this.MenuBtnUserBeer.Text = "Your Catalog";
-            this.MenuBtnUserBeer.UseVisualStyleBackColor = true;
+            this.MenuBtnUserBeer.UseVisualStyleBackColor = false;
             // 
             // MenuBtnUserSettings
             // 

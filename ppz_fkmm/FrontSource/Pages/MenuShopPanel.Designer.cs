@@ -55,6 +55,8 @@ namespace ppz_fkmm.FrontSource.Pages
             // MenuBtnShopBeer
             // 
             this.MenuBtnShopBeer.AutoSize = true;
+            this.MenuBtnShopBeer.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.MenuBtnShopBeer.Enabled = false;
             this.MenuBtnShopBeer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.8F);
             this.MenuBtnShopBeer.Location = new System.Drawing.Point(4, 54);
             this.MenuBtnShopBeer.Margin = new System.Windows.Forms.Padding(4);
@@ -62,7 +64,7 @@ namespace ppz_fkmm.FrontSource.Pages
             this.MenuBtnShopBeer.Size = new System.Drawing.Size(226, 42);
             this.MenuBtnShopBeer.TabIndex = 1;
             this.MenuBtnShopBeer.Text = "Store Catalog ";
-            this.MenuBtnShopBeer.UseVisualStyleBackColor = true;
+            this.MenuBtnShopBeer.UseVisualStyleBackColor = false;
             // 
             // MenuBtnShopSettings
             // 

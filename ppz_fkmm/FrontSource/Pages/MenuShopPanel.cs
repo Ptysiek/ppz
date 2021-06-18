@@ -35,7 +35,7 @@ namespace ppz_fkmm.FrontSource.Pages
 
         private void MenuBtnShopSearch_Click(object sender, EventArgs e)
         {
-            _program._pagesControler.PushPage("ShopSearchPage");
+            _program._pagesControler.PushPage("UserSearchPage");
         }
     }
 }

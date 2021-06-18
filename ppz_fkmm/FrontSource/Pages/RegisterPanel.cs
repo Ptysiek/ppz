@@ -43,7 +43,7 @@ namespace ppz_fkmm.FrontSource.Pages
                 else
                 {
                     _program._layoutControler.ChangeLayout("ThreeWingedShopLayout");
-                    _program._pagesControler.PushPage("ShopSearchPage");
+                    _program._pagesControler.PushPage("UserSearchPage");
                 }
                 Cleanup();
             }
