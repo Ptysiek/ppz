@@ -24,6 +24,8 @@ namespace ppz_fkmm.FrontSource.Structures
         public SplitContainer _verticalSplitContainer;
 
         Program _program;
+        readonly Color activeColor = Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+        readonly Color bgColor = Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
 
         public ThreeWingedShopLayout(Program program)
         {
@@ -62,10 +64,10 @@ namespace ppz_fkmm.FrontSource.Structures
                 SplitterDistance = 56,
                 TabIndex = 0,
 
-                BackColor = SystemColors.ActiveCaption
+                BackColor = activeColor
             };
-            result.Panel1.BackColor = SystemColors.ControlLight;
-            result.Panel2.BackColor = SystemColors.ActiveCaption;
+            result.Panel1.BackColor = bgColor; // SystemColors.ControlLight;
+            result.Panel2.BackColor = activeColor;
 
             return result;
         }
@@ -82,10 +84,10 @@ namespace ppz_fkmm.FrontSource.Structures
                 SplitterDistance = 183,
                 TabIndex = 0,
 
-                BackColor = SystemColors.ActiveCaption
+                BackColor = activeColor //SystemColors.ActiveCaption
             };
-            result.Panel1.BackColor = SystemColors.ControlLight;
-            result.Panel2.BackColor = SystemColors.ControlLight;
+            result.Panel1.BackColor = bgColor; // SystemColors.ControlLight;
+            result.Panel2.BackColor = bgColor; // SystemColors.ControlLight;
 
             var page = new MenuShopPanel(_program) {
                 Dock = DockStyle.Fill
